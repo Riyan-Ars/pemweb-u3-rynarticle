@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <rect width="800" height="400" fill="#e2e8f0"/>
+  <g fill="#94a3b8" transform="translate(360, 150)">
+    <path d="M40 0C17.9 0 0 17.9 0 40s17.9 40 40 40 40-17.9 40-40S62.1 0 40 0zm0 15c13.8 0 25 11.2 25 25s-11.2 25-25 25-25-11.2-25-25 11.2-25 25-25z"/>
+    <path d="M10 75l20-25 15 20 25-30 20 35H10z"/>
+  </g>
+  <text x="400" y="270" font-family="system-ui, sans-serif" font-size="20" fill="#64748b" text-anchor="middle">Gambar Tidak Tersedia</text>
+</svg>

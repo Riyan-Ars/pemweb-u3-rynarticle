@@ -1,0 +1,36 @@
+@if ($paginator->hasPages())
+    <nav role="navigation" aria-label="Pagination">
+        <ul class="pagination">
+            {{-- Tombol sebelumnya --}}
+            @if ($paginator->onFirstPage())
+                <li class="disabled" aria-disabled="true"><span>&lsaquo;</span></li>
+            @else
+                <li><a href="{{ $paginator->previousPageUrl() }}" rel="prev">&lsaquo;</a></li>
+            @endif
+
+            {{-- Nomor halaman --}}
+            @foreach ($elements as $element)
+                @if (is_string($element))
+                    <li class="disabled"><span>{{ $element }}</span></li>
+                @endif
+
+                @if (is_array($element))
+                    @foreach ($element as $page => $url)
+                        @if ($page == $paginator->currentPage())
+                            <li class="active" aria-current="page"><span>{{ $page }}</span></li>
+                        @else
+                            <li><a href="{{ $url }}">{{ $page }}</a></li>
+                        @endif
+                    @endforeach
+                @endif
+            @endforeach
+
+            {{-- Tombol berikutnya --}}
+            @if ($paginator->hasMorePages())
+                <li><a href="{{ $paginator->nextPageUrl() }}" rel="next">&rsaquo;</a></li>
+            @else
+                <li class="disabled" aria-disabled="true"><span>&rsaquo;</span></li>
+            @endif
+        </ul>
+    </nav>
+@endif
